@@ -24,7 +24,7 @@ public class ElementalWords
         }
         Console.WriteLine(builder.ToString());
 
-        results = new string[0][];
+        _results = new string[0][];
         if (word is not null && word.Length > 0)
         {
             Recurse(word, 0, []);
@@ -41,9 +41,9 @@ public class ElementalWords
     /// <summary>
     /// 
     /// </summary>
-    private static string[][] results = new string[0][];
+    private static string[][] _results = new string[0][];
 
-    public static string[][] Results { get => results; }
+    public static string[][] Results { get => _results; }
 
     /// <summary>
     /// 
@@ -55,8 +55,8 @@ public class ElementalWords
     {
         if (startIndex == wordPart.Length)
         {
-            Array.Resize(ref results, results.Length + 1);
-            results[results.Length - 1] = [.. mappedElements];
+            Array.Resize(ref _results, _results.Length + 1);
+            _results[_results.Length - 1] = [.. mappedElements];
             return;
         }
 
