@@ -17,7 +17,7 @@ public class ElementalWords
     {
         Console.WriteLine("********************************************");
         Console.WriteLine(word.ToUpper());
-        var builder=new StringBuilder();
+        var builder = new StringBuilder();
         foreach (var letter in word)
         {
             builder.Append("-");
